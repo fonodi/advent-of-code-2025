@@ -26,7 +26,11 @@ const getAllZeroStops = () => {
         const lastTwoDigits = Number(ticksString.slice(-2));
         const diff = lastNumber - lastTwoDigits;
 
-        if (diff < 0) {
+        if (diff === 0) {
+          const newValue = lastNumber - ticksNumber;
+          rotationDiffs.push(Math.floor(Math.abs(newValue) / 100) + 1);
+          return [...acc, diff];
+        } else if (diff < 0) {
           const newValue = lastNumber - ticksNumber;
           rotationDiffs.push(Math.floor(Math.abs(newValue) / 100) + 1);
           return [...acc, diff + 100];
