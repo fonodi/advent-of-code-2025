@@ -9,5 +9,5 @@ Welcome to my attempt at Advent of Code 2025! 🎉
 ## Run any puzzle
 
 ```bash
-node ./day1/part1/index.mjs
+node ./day1/part1.mjs
 ```
